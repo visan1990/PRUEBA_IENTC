@@ -1,0 +1,102 @@
+<head>
+    <title>PRUEBAIENTC</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+
+    <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui.js"></script>
+    <script type="text/javascript" src="js/funciones.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">NAVEGACION MINIMIZADO</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="/">PRUEBA</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#registrar_usuario">ALTA USUARIO</a></li>
+                    <li><a href="#listado_usuarios">LISTADO USUARIOS</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row" id="registrar_usuario">
+            <div class="col-lg-8 col-lg-offset-2 well">
+                <h2>REGISTRAR USUARIO</h2>
+                <form>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="nombre">Nombre usuario</label>
+                                <input type="text" class="form-control" id="nombre" name="apellido" maxlength="20" placeholder="Ejem. Victor Manuel">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="nombre">Apellidos usuario</label>
+                                <input type="text" class="form-control" id="apellidos" name="apellidos" maxlength="20" placeholder="Ejem. Sanchez Ramirez">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="nombre">Fecha de nacimiento</label>
+                                <input type="text" class="form-control" id="fecha_nacimiento" name="fecha_nacimiento" maxlength="10" placeholder="Ejem. 08/11/1990">
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="nombre">Telefono</label>
+                                <input type="text" class="form-control" id="telefono" name="telefono" maxlength="10" placeholder="Ejem. 2721174925">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <button type="button" id="guardar_usuario" class="btn btn-primary btn-block">GUARDAR</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="row hidden" id="listado_usuarios">
+            <div class="col-lg-8 col-lg-offset-2 well">
+                <h2>LISTADO DE USUARIOS</h2>
+                <div id="listado"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id = "confirmar">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">BORRAR USUARIO</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>¿DESEA REALMENTE BORRAR ESTE USUARIO?</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-success">CONTINUAR</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal">CANCELAR</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
